@@ -1,0 +1,295 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+body{
+    font-family: Poppins,sans-serif;
+}
+
+header{
+    .navMenu-container{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        z-index: 1;
+        height: 50px;
+        padding-right: 30px;
+        .right{
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            .menu-warpper{
+                display: flex;
+            }
+            .navbar-item{
+                margin-right: 40px;
+                display: flex;
+                align-items: center;
+                a{
+                    padding: 5px;
+                    color: white;
+                }
+                &::after{
+                    content: "";
+                    display: block;
+                    width: 1px;
+                    height: 1px;
+                    border-style: solid;
+                    border-width: 4px 4px 0 4px;
+                    border-color: #fff transparent transparent transparent;
+                }
+            }
+            .login, .join{
+                border-radius: 50px;
+                color: white;
+                font-weight: bold;
+            }
+            .login{
+                padding: 3px 40px;
+                background-color: #43b2ce;
+                margin-right: 20px;
+            }
+            .join{
+                padding: 3px 30px;
+                background-color: #ff7600;
+            }
+        }
+    }
+}
+main{
+    margin-top: -50px;
+    overflow: hidden;
+}
+.home-container{
+    background: url(../img/mainbg.jpg) no-repeat bottom/cover;
+    width: 100%;
+}
+.home-banner{
+    img{
+        width: 100%;
+    }
+}
+.center-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    .fishimg{
+        position: absolute;
+        bottom: 21%;
+        right: -3%;
+        width: 25%;
+    }
+    .shark{
+        position: absolute;
+        width: 20%;
+        top: 27%;
+        left: 0;
+    }
+}
+.center-content{
+    width: 1440px;
+    margin: auto;
+}
+.center-swiper, .center-list, .flag-content{
+    margin-bottom: 100px;
+    
+}
+.center-swiper{
+    position: relative;
+    padding-left: 6.5px;
+} 
+.swiper-img{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 5px;
+}
+.swiper-btn{
+    svg{
+        background: #fff;
+        border-radius: 100px;
+        padding: 10px;
+    }
+    .bi-chevron-left, .bi-chevron-right{
+        position: absolute;
+    }
+    .bi-chevron-left{
+        bottom: 140px;
+        left: -50px;
+    }
+    .bi-chevron-right{
+        bottom: 140px;
+        right: -50px;
+    }
+}
+.center-list{
+    position: relative;
+    color: #112240;
+    div{
+        font-size: 50px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    p{
+        text-align: center;
+        line-height: 1.5;
+        padding: 0 200px ;
+    }
+}
+
+.flag-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 6.5px;
+}
+.download-container{
+    padding-left: 6.5px;
+}
+.download-content{
+    display: flex;
+    align-items: center;
+}
+.download-right{
+    max-width: 1200px;
+    margin-top: 18px;
+}
+.intro-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .txt{
+        width: 36%;
+        color: #112240;
+        h1{
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        p{
+            width: 85%;
+            line-height: 1.5;
+        }
+    }
+    img{
+        width: 35%;
+    }
+    .btn-item{
+        background: #ff7600;
+        border-radius: 50px;
+        padding: 8px 30px;
+        color: #112240;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    
+}
+@media (min-width: 1440px) {
+    .intro-item{
+        flex-direction: row;
+        justify-content: space-evenly;
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
+    }    
+}
+.footer-container{
+    background-color: #43b2ce;
+    padding: 100px 0 200px;
+    margin-top: 100px;
+    border-bottom: 50px solid #5acce9;
+    .footer-content {
+        width: 1440px;
+        margin: auto;
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+    }
+    .footer-content,a{
+        color: #fff;
+        .info{
+            max-width: 50%;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            .text{
+                margin-bottom: 10px;
+            }
+            h2{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .comminity{
+            max-width: 25%;
+            margin-left: 450px;
+            h2{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .comminity-text{
+                line-height: 1.7;
+                font-weight: 300;
+            }
+        }
+        .social{
+            text-align: end;
+            max-width: 25%;
+            h2{
+                font-size: 20px;
+                margin-bottom: 10px;
+                text-align: start;
+            }
+            img{
+                width: 40px;
+                margin:1px 2px 0 0;
+
+            }
+        }
+    }
+}
